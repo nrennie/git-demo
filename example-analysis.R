@@ -2,6 +2,7 @@
 
 library(gtsummary)
 library(ggcorrplot)
+library(tidyr)
 library(dplyr)
 library(forcats)
 
@@ -27,7 +28,8 @@ ggplot(LOS) +
 
 ggplot(LOS) +
   geom_histogram(aes(Age)) +
-  facet_wrap(~Organisation)
+  facet_wrap(~Organisation) +
+  theme_minimal()
 
 
 # Summary statistics ------------------------------------------------------
