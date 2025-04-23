@@ -3,6 +3,7 @@
 library(gtsummary)
 library(ggcorrplot)
 library(tidyr)
+library(dplyr)
 library(forcats)
 
 
@@ -64,6 +65,8 @@ summary(mod3)
 mod4 <- glm(Death ~ LOS, data = LOS, family = "binomial")
 summary(mod4)
 
+mod5 <- glm(Death ~ LOS + Age, data = LOS, family = "binomial")
+summary(mod5)
 
 # Results -----------------------------------------------------------------
 
